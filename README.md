@@ -3,7 +3,7 @@
 
 This project is a microservices-based Company Management System that includes services for managing companies, job postings, and reviews.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-⚙️ Technologies Used
+##⚙️ Technologies Used
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 🖥️ Spring Boot - Microservices framework
 
@@ -82,42 +82,14 @@ docker-compose restart service-name
 
 🌐 Accessing Services
 --------------------------
+| Service                  | URL                                      | Description                  |
+|--------------------------|-----------------------------------------|------------------------------|
+| 🛢️ pgAdmin              | [http://localhost:5050](http://localhost:5050)   | PostgreSQL web interface    |
+| 📡 Service Registry (Eureka) | [http://localhost:8761](http://localhost:8761) | Microservice discovery      |
+| 🚪 API Gateway          | [http://localhost:8084](http://localhost:8084) | Main API entry point       |
+| 📊 Zipkin Dashboard     | [http://localhost:9411](http://localhost:9411) | Microservice tracing       |
+| 📩 RabbitMQ Dashboard  | [http://localhost:15672](http://localhost:15672) | Message queue admin panel  |
 
-📌 Service 🔗 URL
-
-
-
-📝 Description
-
-🛢️ pgAdmin
-
-http://localhost:5050
-
-PostgreSQL web interface
-
-📡 Service Registry (Eureka)
-
-http://localhost:8761
-
-Microservice discovery
-
-🚪 API Gateway
-
-http://localhost:8084
-
-Main API entry point
-
-📊 Zipkin Dashboard
-
-http://localhost:9411
-
-Microservice tracing
-
-📩 RabbitMQ Dashboard
-
-http://localhost:15672
-
-Message queue admin panel
 
 ⚙️ Environment Variables
 
@@ -126,55 +98,18 @@ Message queue admin panel
 📲 Port
 
 ⚙️ Environment Variables
--
+--
+| Service              | Port  | Environment Variables |
+|----------------------|------|-----------------------------------------------|
+| 🛢️ Postgres         | 5432 | `POSTGRES_USER=vivek`, `POSTGRES_PASSWORD=1234` |
+| 🌐 pgAdmin         | 5050 | `PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org`, `PGADMIN_DEFAULT_PASSWORD=admin` |
+| 📡 Service Registry | 8761 | - |
+| 🔧 Config Server MS | 8080 | `SPRING_PROFILES_ACTIVE=docker` |
+| 🚪 Gateway MS      | 8084 | `SPRING_PROFILES_ACTIVE=docker` |
+| 🏢 Company MS      | 8081 | `SPRING_PROFILES_ACTIVE=docker` |
+| 💼 Job MS         | 8082 | `SPRING_PROFILES_ACTIVE=docker`, `EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://servicereg:8761/eureka` |
+| ⭐ Review MS       | 8083 | `SPRING_PROFILES_ACTIVE=docker` |
 
-🛢️ postgres
-
-5432
-
-POSTGRES_USER=vivek, POSTGRES_PASSWORD=1234
-
-🌐 pgadmin
-
-5050
-
-PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org, PGADMIN_DEFAULT_PASSWORD=admin
-
-📡 servicereg
-
-8761
-
--
-
-🔧 config-server-ms
-
-8080
-
-SPRING_PROFILES_ACTIVE=docker
-
-🚪 gateway-ms
-
-8084
-
-SPRING_PROFILES_ACTIVE=docker
-
-🏢 companyms
-
-8081
-
-SPRING_PROFILES_ACTIVE=docker
-
-💼 jobms
-
-8082
-
-SPRING_PROFILES_ACTIVE=docker, EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://servicereg:8761/eureka
-
-⭐ reviewms
-
-8083
-
-SPRING_PROFILES_ACTIVE=docker
 
 🔗 Networks and Volumes
 -
