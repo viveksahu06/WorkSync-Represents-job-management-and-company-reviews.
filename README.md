@@ -1,9 +1,9 @@
 # WorkSync-Represents-job-management-and-company-reviews.
-📝 Overview
+##📝 Overview
 
 This project is a microservices-based Company Management System that includes services for managing companies, job postings, and reviews.
 
-⚙️ Technologies Used
+##⚙️ Technologies Used
 
 🖥️ Spring Boot - Microservices framework
 
