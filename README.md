@@ -37,19 +37,18 @@ This project is a microservices-based Company Management System that includes se
 -
 
 📡 Service Registry (servicereg) - Eureka-based service discovery
--
 
 🔧 Config Server (config-server-ms) - Centralized configuration management
--
+
 
 🚪 API Gateway (gateway-ms) - Single entry point for routing API requests
--
+
 🏢 Company Service (companyms) - Handles company-related operations
--
+
 💼 Job Service (jobms) - Manages job postings
--
+
 ⭐ Review Service (reviewms) - Stores and manages reviews
--
+
 
 ⚙️ Prerequisites
 ------
@@ -57,28 +56,28 @@ This project is a microservices-based Company Management System that includes se
 Ensure you have the following installed before running the system:
 
 🐳 Docker (latest version)
--
+
 
 📜 Docker Compose
--
+
 
 ▶️ Running the Application
--
+
 
 To start all services in detached mode, run:
 
 docker-compose up -d
--
+
 
 To stop all services, run:
 
 docker-compose down
--
+
 
 To restart a specific service, run:
 
 docker-compose restart service-name
--
+
 
 🌐 Accessing Services
 --------------------------
